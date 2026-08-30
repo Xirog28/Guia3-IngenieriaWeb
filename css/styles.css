@@ -1,0 +1,518 @@
+/* ========================================
+   VARIABLES DE COLOR
+   ======================================== */
+
+:root {
+    --beige-claro: #f5f0e6;
+    --beige: #e8dfcf;
+    --beige-oscuro: #d8cdb9;
+
+    --verde-oliva: #87966a;
+    --verde-oliva-claro: #a8b58d;
+    --verde-oliva-oscuro: #667653;
+
+    --blanco: #ffffff;
+    --texto: #34382f;
+    --texto-suave: #62685a;
+
+    --sombra: rgba(70, 75, 55, 0.12);
+}
+
+
+/* ========================================
+   CONFIGURACIÓN GENERAL
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--beige-claro);
+    color: var(--texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
+
+header {
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--beige-oscuro);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    color: var(--verde-oliva-oscuro);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul a {
+    color: var(--texto);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+    color: var(--verde-oliva-oscuro);
+}
+
+
+/* ========================================
+   SECCIÓN INICIO
+   ======================================== */
+
+#inicio {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--beige-claro);
+}
+
+#inicio > div {
+    max-width: 750px;
+}
+
+#inicio p:first-child {
+    color: var(--verde-oliva-oscuro);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#inicio h1 {
+    color: var(--verde-oliva-oscuro);
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+#inicio h2 {
+    color: var(--texto);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+#inicio p {
+    color: var(--texto-suave);
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+#inicio a {
+    display: inline-block;
+
+    background-color: var(--verde-oliva);
+    color: var(--blanco);
+
+    padding: 13px 25px;
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+#inicio a:hover {
+    background-color: var(--verde-oliva-oscuro);
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   SECCIÓN SOBRE MÍ
+   ======================================== */
+
+#sobre-mi {
+    background-color: var(--blanco);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+#sobre-mi > div {
+    flex: 1 1 300px;
+}
+
+#sobre-mi > div:first-child {
+    flex: 1 1 100%;
+}
+
+#sobre-mi > div:first-child p:first-child {
+    color: var(--verde-oliva-oscuro);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#sobre-mi h2 {
+    color: var(--verde-oliva-oscuro);
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+#sobre-mi p {
+    color: var(--texto-suave);
+    margin-bottom: 15px;
+}
+
+#sobre-mi h3 {
+    color: var(--texto);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   HABILIDADES
+   ======================================== */
+
+#sobre-mi > div:nth-child(2) {
+    background-color: var(--beige-claro);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--sombra);
+}
+
+#sobre-mi > div:nth-child(2) ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#sobre-mi > div:nth-child(2) li {
+    background-color: var(--verde-oliva-claro);
+    color: var(--texto);
+
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   PROYECTOS
+   ======================================== */
+
+#sobre-mi > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sobre-mi article {
+    background-color: var(--beige-claro);
+
+    padding: 25px;
+    border-left: 5px solid var(--verde-oliva);
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px var(--sombra);
+}
+
+#sobre-mi article h4 {
+    color: var(--verde-oliva-oscuro);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#sobre-mi article p {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   SECCIÓN CONTACTO
+   ======================================== */
+
+#contacto {
+    background-color: var(--beige-claro);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contacto > div {
+    flex: 1 1 350px;
+}
+
+#contacto > div p:first-child {
+    color: var(--verde-oliva-oscuro);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contacto h2 {
+    color: var(--verde-oliva-oscuro);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+}
+
+
+/* ========================================
+   FORMULARIO
+   ======================================== */
+
+#contacto form {
+    flex: 1 1 450px;
+
+    background-color: var(--blanco);
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px var(--sombra);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contacto form div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#contacto label {
+    color: var(--texto);
+    font-weight: bold;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--beige-oscuro);
+    border-radius: 6px;
+
+    background-color: var(--beige-claro);
+
+    color: var(--texto);
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: border-color 0.3s ease;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+    border-color: var(--verde-oliva);
+}
+
+#contacto textarea {
+    resize: vertical;
+}
+
+#contacto button {
+    border: none;
+
+    background-color: var(--verde-oliva);
+    color: var(--blanco);
+
+    padding: 13px 20px;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+#contacto button:hover {
+    background-color: var(--verde-oliva-oscuro);
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: var(--verde-oliva-oscuro);
+
+    color: var(--blanco);
+
+    text-align: center;
+
+    padding: 25px 8%;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ========================================
+   BREAKPOINT 1 — TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    section {
+        padding: 70px 6%;
+    }
+
+    nav {
+        padding: 18px 6%;
+    }
+
+    #inicio h1 {
+        font-size: 3.8rem;
+    }
+
+    #inicio h2 {
+        font-size: 1.7rem;
+    }
+
+    #sobre-mi {
+        gap: 25px;
+    }
+
+    #contacto {
+        gap: 35px;
+    }
+}
+
+
+/* ========================================
+   BREAKPOINT 2 — MÓVIL
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 60px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 16px 5%;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    nav ul a {
+        font-size: 0.9rem;
+    }
+
+    #inicio {
+        min-height: 80vh;
+    }
+
+    #inicio h1 {
+        font-size: 3rem;
+    }
+
+    #inicio h2 {
+        font-size: 1.4rem;
+    }
+
+    #inicio p {
+        font-size: 1rem;
+    }
+
+    #sobre-mi h2 {
+        font-size: 1.9rem;
+    }
+
+    #sobre-mi > div:nth-child(2),
+    #sobre-mi article {
+        padding: 22px;
+    }
+
+    #contacto {
+        flex-direction: column;
+    }
+
+    #contacto form {
+        width: 100%;
+        padding: 25px;
+    }
+
+    #contacto h2 {
+        font-size: 2rem;
+    }
+}
